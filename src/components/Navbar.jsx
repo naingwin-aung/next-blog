@@ -5,6 +5,12 @@ import { LogIn } from "lucide-react";
 import { useState } from "react";
 import Image from "./Image";
 import { Link } from "react-router-dom";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -35,9 +41,8 @@ const Navbar = () => {
           <Link to="/">Most Popular</Link>
           <Link to="/">About</Link>
           <Link to="/">
-            <button className="flex gap-1 items-center px-4 py-2 rounded-[2rem] bg-blue-600/70 text-white cursor-pointer">
+            <button className="flex gap-1 items-center px-4 py-2 rounded-[2rem] bg-blue-600/70 text-white cursor-pointer text-sm">
               Log in
-              <LogIn size={22} />
             </button>
           </Link>
         </div>
@@ -48,11 +53,15 @@ const Navbar = () => {
         <Link to="/">Trending</Link>
         <Link to="/">Most Popular</Link>
         <Link to="/">About</Link>
-        <Link to="/">
-          <button className="flex gap-1 items-center px-4 py-2 rounded-[2rem] bg-blue-600/70 text-white cursor-pointer">
-            Log in
-            <LogIn size={22} />
-          </button>
+        <Link to="/login">
+          <SignedOut>
+            <button className="flex gap-1 items-center px-4 py-2 rounded-[2rem] bg-blue-600/70 text-white cursor-pointer text-sm">
+              Log in
+            </button>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </Link>
       </div>
     </div>
