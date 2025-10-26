@@ -2,6 +2,7 @@ import { Circle, NotebookPen } from "lucide-react";
 import { Link } from "react-router-dom";
 import MainCategory from "../components/MainCategory";
 import FeaturedPost from "../components/FeaturedPost";
+import PostList from "../components/PostList";
 
 const Home = () => {
   return (
@@ -37,6 +38,9 @@ const Home = () => {
       <MainCategory />
       {/* FEATURED POSTS */}
       <FeaturedPost />
+      {/* Post List */}
+      <h1 className="my-8 text-2xl text-gray-600">Recent Posts</h1>
+      <PostList />
     </div>
   );
 };

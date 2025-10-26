@@ -1,6 +1,5 @@
 import { Menu } from "lucide-react";
 import { X } from "lucide-react";
-import { LogIn } from "lucide-react";
 
 import { useState } from "react";
 import Image from "./Image";
@@ -8,7 +7,6 @@ import { Link } from "react-router-dom";
 import {
   SignedIn,
   SignedOut,
-  SignInButton,
   UserButton,
 } from "@clerk/clerk-react";
 const Navbar = () => {
@@ -31,22 +29,25 @@ const Navbar = () => {
         </div>
 
         {/* Mobile link list */}
-        <div
-          className={`w-full h-screen flex flex-col gap-10 items-center pt-25 absolute top-16 bg-white/10 backdrop-filter backdrop-blur-sm transition-all ease-in-out duration-200 select-none font-medium
-            ${open ? "-right-0" : "-right-full"}
-          `}
-        >
-          <Link to="/">Home</Link>
-          <Link to="/">Trending</Link>
-          <Link to="/">Most Popular</Link>
-          <Link to="/">About</Link>
-          <Link to="/">
-            <button className="flex gap-1 items-center px-4 py-2 rounded-[2rem] bg-blue-600/70 text-white cursor-pointer text-sm">
-              Log in
-            </button>
-          </Link>
+        <div className={`${open ? "block" : "hidden"}`}>
+          <div
+            className={`w-full h-screen flex flex-col gap-10 items-center pt-25 absolute top-16 bg-white/10 backdrop-filter backdrop-blur-sm transition-all ease-in-out duration-200 select-none font-medium
+              ${open ? "-right-0" : "-right-full"}
+            `}
+          >
+            <Link to="/">Home</Link>
+            <Link to="/">Trending</Link>
+            <Link to="/">Most Popular</Link>
+            <Link to="/">About</Link>
+            <Link to="/">
+              <button className="flex gap-1 items-center px-4 py-2 rounded-[2rem] bg-blue-600/70 text-white cursor-pointer text-sm">
+                Log in
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
+
       {/* Desktop menu */}
       <div className="hidden md:flex items-center gap-8 xl:gap-12 font-medium">
         <Link to="/">Home</Link>
