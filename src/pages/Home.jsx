@@ -1,10 +1,11 @@
 import { Circle, NotebookPen } from "lucide-react";
 import { Link } from "react-router-dom";
 import MainCategory from "../components/MainCategory";
+import FeaturedPost from "../components/FeaturedPost";
 
 const Home = () => {
   return (
-    <div className="mt-4 flex flex-col gap-4">
+    <div className="mt-4 flex flex-col gap-7">
       {/* BREADCRUMB */}
       <div className="flex gap-4">
         <Link to="/">Home</Link>
@@ -34,6 +35,8 @@ const Home = () => {
       </div>
       {/* MAIN CATEGORY */}
       <MainCategory />
+      {/* FEATURED POSTS */}
+      <FeaturedPost />
     </div>
   );
 };
