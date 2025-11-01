@@ -17,7 +17,7 @@ const Navbar = () => {
       {/* LOGO */}
       <Link to="/" className="flex items-center gap-4 text-2xl font-medium">
         <Image src="/logo.png" alt="Logo" className="w-8 h-8" />
-        <span>lamalog</span>
+        <span>Lamalog</span>
       </Link>
       {/* Mobile menu */}
       <div className="md:hidden">
@@ -56,7 +56,7 @@ const Navbar = () => {
         <Link to="/">About</Link>
         <Link to="/login">
           <SignedOut>
-            <button className="flex gap-1 items-center px-4 py-2 rounded-[2rem] bg-blue-600/70 text-white cursor-pointer text-sm">
+            <button className="flex gap-1 items-center px-4 py-2 rounded-[2rem] bg-gradient-to-r from-blue-400 to-blue-600 text-white cursor-pointer text-sm">
               Log in
             </button>
           </SignedOut>

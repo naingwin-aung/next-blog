@@ -23,7 +23,9 @@ const PostListItem = () => {
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sit cupiditate nesciunt sapiente. Fuga sunt repellat aperiam saepe perspiciatis consequuntur voluptatem modi, sed laborum? Libero quibusdam labore excepturi omnis corrupti! ...
             </p>
-            <Link to="/test" className="hover:underline text-sm text-blue-800">See more</Link>
+            <div>
+                <Link to="/test" className="hover:underline text-sm text-blue-800">See more</Link>
+            </div>
         </div>
     </div>
   )
